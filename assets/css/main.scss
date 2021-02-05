@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap');
 
-$tabletwidth: 1000px;
+$tabletwidth: 1100px;
 @mixin  tablet {
     @media (max-width: #{$tabletwidth}) {
         @content;
@@ -80,8 +80,8 @@ h1.logo {
 
 .card {
     // dimensions
-    width: 400px;
-    height: 200px;
+    width: 200px;
+    height: 100px;
     // desing
     border: none;
     border-radius: 10px;
@@ -91,6 +91,7 @@ h1.logo {
 section {
     // design
     border-bottom: 1px solid #eee;
+    padding-top: 100px;
 }
 
 .navigation__bar {
