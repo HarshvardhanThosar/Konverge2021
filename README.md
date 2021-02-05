@@ -2,6 +2,6 @@
 
 This repository hosts a basic web design to provide an example layout to start with.
 
-> Note: Use the __.debug__ _class_ to html elements to while styling the dimensions.
+> Note: Use the __.debug__ _class_ to html elements while styling the dimensions.
 
 > Note: Use the ___.scss___ files for styling. ( ___Try not to change the .css file.___ )
