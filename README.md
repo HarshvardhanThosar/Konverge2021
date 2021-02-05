@@ -1,6 +1,4 @@
-# Konverge 2021
-
-<img src="https://github.com/HarshvardhanThosar/Konverge2021/blob/main/assets/gfx/Konverge2021.svg" alt="Konverge 2021" width="100px">
+<img src="https://github.com/HarshvardhanThosar/Konverge2021/blob/main/assets/gfx/Konverge2021.svg" alt="Konverge 2021" width="200px">
 
 This repository hosts a basic static web design for my college fest Konverge 2021. The repository is created to provide an initial level example layout to work with.
 
