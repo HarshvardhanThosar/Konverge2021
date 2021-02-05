@@ -165,6 +165,7 @@ section {
   }
   .navigation__bar .navigation__list {
     width: 100vw;
+    max-width: none;
     height: 250px;
     position: absolute;
     top: -100vh;
@@ -235,7 +236,8 @@ section.hero img.logo__medium, section.hero img.logo__large {
 }
 
 section.hero div.container {
-  max-width: 750px;
+  width: auto;
+  max-width: 500px;
   justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;

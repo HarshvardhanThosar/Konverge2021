@@ -176,6 +176,7 @@ section {
     
         .navigation__list {
             width: 100vw;
+            max-width: none;
             // dimensions
             height: 250px;
             // positions
@@ -244,7 +245,8 @@ section.hero {
 
     div.container{
         // dimensions
-        max-width: 750px;
+        width: auto;
+        max-width: 500px;
         // display
         justify-self: center;
         display: flex;
