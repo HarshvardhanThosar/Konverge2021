@@ -9,6 +9,8 @@
   list-style: none;
   outline: none;
   text-decoration: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 *::-webkit-scrollbar {
@@ -25,16 +27,24 @@ html {
 }
 
 body {
-  background: url(../gfx/Konverge2021.svg), #777;
+  background: url(../gfx/Konverge2021.svg), #555;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: 50%;
   background-position: 90% 110%;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 body > * {
   padding: 0 50px;
   padding-top: 100px;
+}
+
+@media (max-width: 900px) {
+  body > * {
+    padding: 0 20px;
+  }
 }
 
 img.logo {
@@ -88,6 +98,27 @@ section {
           box-shadow: 0 0 10px -5px;
 }
 
+@media (max-width: 900px) {
+  .navigation__bar {
+    padding: 0 20px;
+  }
+}
+
+.navigation__bar .menu__trigger {
+  z-index: 10;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navigation__bar .menu__trigger {
+    display: block;
+  }
+}
+
+.navigation__bar .menu__trigger img {
+  width: 20px;
+}
+
 .navigation__list {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -100,6 +131,9 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -119,7 +153,55 @@ section {
   color: #333 !important;
 }
 
+@media (max-width: 900px) {
+  .navigation__bar {
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+  }
+  .navigation__bar .navigation__list {
+    width: 100vw;
+    height: 250px;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: white;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    border-bottom: 1px solid #eee;
+    -webkit-box-shadow: 0 0 50px -5px;
+            box-shadow: 0 0 50px -5px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .navigation__bar .navigation__list li {
+    text-align: left;
+    font-size: 18px;
+  }
+}
+
+.navigation__list.active {
+  position: fixed !important;
+  top: 50px !important;
+}
+
 section.hero {
+  scroll-snap-align: start;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +214,15 @@ section.hero {
           justify-content: space-evenly;
   background-color: white;
   padding: 0;
+}
+
+@media (max-width: 900px) {
+  section.hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 section.hero h1.title {
@@ -161,12 +252,22 @@ section.hero div.container {
   padding: 0 50px;
 }
 
+@media (max-width: 900px) {
+  section.hero div.container {
+    padding: 0 20px;
+  }
+  section.hero div.container * {
+    text-align: justify;
+  }
+}
+
 section.hero div.container:nth-of-type(1) {
   width: 250px;
   padding: 0;
 }
 
 .section__sponsors {
+  scroll-snap-align: start;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,36 +320,28 @@ section.hero div.container:nth-of-type(1) {
 }
 
 footer {
-  height: 250px;
-  position: relative;
-  padding-top: 50px;
-}
-
-footer * {
-  color: white !important;
-}
-
-footer .navigation__list {
-  max-width: 700px;
+  scroll-snap-align: start;
+  width: 100vw;
   position: absolute;
-  right: 50px;
-  bottom: 50px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-footer .navigation__list p {
-  font-size: 25px;
-  padding-right: 20px;
-  margin-right: 20px;
-  border-right: 1px solid white;
+footer * {
+  color: white !important;
 }
 
 .glass__effect {
