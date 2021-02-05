@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap');
 
-$tabletwidth: 900px;
+$tabletwidth: 1000px;
 @mixin  tablet {
     @media (max-width: #{$tabletwidth}) {
         @content;
@@ -178,7 +178,7 @@ section {
             // dimensions
             height: 250px;
             // positions
-            position: fixed;
+            position: absolute;
             top: -100vh;
             left: 0;
             right: 0;
