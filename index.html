@@ -8,13 +8,22 @@
 </head>
 <body>
     <header class="navigation__bar glass__effect">
-        <img src="./assets/gfx/Konverge2021.svg" alt="Konverge Logo" class="logo">
+        <a href="#hero"><img src="./assets/gfx/Konverge2021.svg" alt="Konverge Logo" class="logo"><div class="preproduction__tag"><span class="instruction">To update the logo, instead of changing the code just replace the 'Konverge2021.svg' file (keeping file name and location same)</span></div></a>
         <!-- <h1 class="logo">Konverge 2021</h1> -->
         <ul class="navigation__list">
+
+            <!-- TODO: Remove after all the changes are made -->
+            <li class="preproduction__tag">
+                <span class="instruction">Change the max-width css propertiy of '.navigation__list' according to your need.</span>
+            </li>
+            <li class="preproduction__tag">
+                <span class="instruction">Add/customize these links</span>
+            </li>
+
             <li class="navigation__list__item"><a href="#sponsors">Our Sponsors</a></li>
-            <li class="navigation__list__item">Vectors</li>
-            <li class="navigation__list__item">Kurukshetra</li>
-            <li class="navigation__list__item">Rhythms</li>
+            <li class="navigation__list__item"><a href="#sponsors">Vectors</a></li>
+            <li class="navigation__list__item"><a href="#sponsors">Kurukshetra</a></li>
+            <li class="navigation__list__item"><a href="#sponsors">Rhythms</a></li>
         </ul>
     </header>
     <section class="hero" id="hero">
@@ -24,12 +33,18 @@
             <img src="./assets/gfx/2021.svg" alt="2021" class="logo__large">
         </div>
         <div class="container">
-            <h1 class="title">What is Konverge</h1>
+            <h1 class="title">What is Konverge<div class="preproduction__tag"><span class="instruction">Add/customize the title & the content below</span></div></h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et perferendis cupiditate quos natus dolorum reprehenderit minus aliquid laudantium, quas, sint ut sequi ex assumenda laborum labore, architecto amet doloribus ipsa!</p>
         </div>
     </section>
     <section class="section__sponsors" id="sponsors">
         <h1 class="title">Our Sponsors</h1>
+        <center>
+            <div class="preproduction__tag"><span class="instruction">Change the '.flex' to '.grid' in the following container to set the cards alignment to grid.</span></div>
+            <div class="preproduction__tag"><span class="instruction">Use the '.card' template in the following cards gallery to add more sponsor cards.</span></div>
+            <div class="preproduction__tag"><span class="instruction">Use the '.debug' class to elements while debugging and remove the '.debug' class before production.</span></div>
+
+        </center>
         <div class="container gallery flex">
             <div class="card debug"></div>
         </div>

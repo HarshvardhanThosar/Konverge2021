@@ -34,7 +34,17 @@ html {
 
 body {
     // design
-    background-color: black;
+    background: url(../gfx/Konverge2021.svg), #777;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 90% 110%;
+
+    &>* {
+        // design
+        padding: $sidePadding;
+        padding-top: 100px;
+    }
 }
 
 img.logo {
@@ -50,6 +60,21 @@ img.logo.invert {
 h1.logo {
     // text
     font-size: 24px;
+}
+
+.card {
+    // dimensions
+    width: 400px;
+    height: 200px;
+    // desing
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+section {
+    // design
+    border-bottom: 1px solid #eee;
 }
 
 .navigation__bar {
@@ -100,17 +125,6 @@ h1.logo {
             color: #333!important;
         }
     }
-}
-
-body>* {
-    // design
-    padding: $sidePadding;
-    padding-top: 100px;
-}
-
-section {
-    // design
-    border-bottom: 1px solid #eee;
 }
 
 section.hero {
@@ -200,16 +214,6 @@ section.hero {
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
-
-    .card {
-        // dimensions
-        width: 400px;
-        height: 200px;
-        // desing
-        border: none;
-        border-radius: 10px;
-        margin-bottom: 50px;
-    }
 }
 
 footer {
@@ -219,10 +223,6 @@ footer {
     position: relative;
     // design
     padding-top: 50px;
-    background: url(../gfx/Konverge2021.svg), #777;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    background-position: 100% 110%;
 
     // misc
     * {color: white!important;}
@@ -258,4 +258,36 @@ footer {
 .debug {
     // design
     background-color: red;
+}
+
+.preproduction__tag {
+    // dimensions
+    width: 15px;
+    height: 15px;
+    // positions
+    position: relative;
+    display: inline-block;
+    // design
+    // border: 2px solid #777;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.preproduction__tag .instruction {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff!important;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.preproduction__tag:hover .instruction {
+  visibility: visible;
 }
